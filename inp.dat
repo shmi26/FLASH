@@ -1,0 +1,33 @@
+#
+# This is a sample input file; 
+#
+# (*) Lines that start with '#' are ignored as comments
+# (*) Do not change the labels on the LHS - doing so will lead to unforeseen errors
+# (*) Change the flag on the RHS of the ":" as appropriate
+#
+
+# number of harmonics
+H     : 8
+
+# Deborah number, omega * lambda
+De    : 10.0              
+
+# Wiessenberg number, gamma0 * omega * lambda
+Wi    : 10.0
+
+# currently, 'giesekus', 'ucm', 'ptt', 'tnm' are implemented in models.py/fnl.ode()
+# for custom model, please add the appropriate dimensionless 'fnl'
+model : 'ptt'
+
+
+# List of Model Parameters. The first two are G and lambda
+# UCM has no additional parameters (only 2)
+# Giesekus and PTT have 3 parameters. Third parameter is alpha, or epsilon.
+# TNM has 4 parameters. Third and fourth parametes are "a" and "b"
+theta : [1.0, 1.0, 0.1]   
+
+# OnScreen Plotting
+isPlot : True
+
+# Verbose model
+verbose : True
